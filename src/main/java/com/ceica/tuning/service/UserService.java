@@ -1,9 +1,9 @@
-package com.ceica.securityspring.service;
+package com.ceica.tuning.service;
 
-import com.ceica.securityspring.model.Authority;
-import com.ceica.securityspring.model.User;
-import com.ceica.securityspring.repository.AuthorityRepository;
-import com.ceica.securityspring.repository.UserRepository;
+import com.ceica.tuning.model.Authority;
+import com.ceica.tuning.model.User;
+import com.ceica.tuning.repository.AuthorityRepository;
+import com.ceica.tuning.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

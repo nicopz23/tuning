@@ -1,4 +1,4 @@
-package com.ceica.securityspring.model;
+package com.ceica.tuning.model;
 
 import jakarta.persistence.*;
 

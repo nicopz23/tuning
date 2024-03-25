@@ -1,11 +1,10 @@
-package com.ceica.securityspring.config;
+package com.ceica.tuning.config;
 
-import com.ceica.securityspring.service.UserService;
+import com.ceica.tuning.service.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.hibernate.annotations.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;

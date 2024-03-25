@@ -1,7 +1,7 @@
-package com.ceica.securityspring.controller;
+package com.ceica.tuning.controller;
 
-import com.ceica.securityspring.model.User;
-import com.ceica.securityspring.service.UserService;
+import com.ceica.tuning.model.User;
+import com.ceica.tuning.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
