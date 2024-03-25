@@ -1,12 +1,8 @@
 package com.ceica.securityspring.model;
 
 import jakarta.persistence.*;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.Collection;
-import java.util.List;
 
 
 @Entity
@@ -21,9 +17,9 @@ public class User {
     @Column(name = "enabled")
     private Boolean enabled;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    /*@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
-    private Collection<Authority> authorities;
+    private Collection<Authority> authorities;*/
 
     public User() {
     }
@@ -62,13 +58,13 @@ public class User {
         this.enabled = enabled;
     }
 
-    public Collection<Authority> getAuthorities() {
+   /* public Collection<Authority> getAuthorities() {
         return authorities;
-    }
+    }*/
 
-    public void setAuthorities(Collection<Authority> authorities) {
+   /* public void setAuthorities(Collection<Authority> authorities) {
         this.authorities = authorities;
-    }
+    }*/
 
     @Override
     public String toString() {
@@ -77,7 +73,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", enabled=" + enabled +
-                ", authorities=" + authorities +
+                //", authorities=" + authorities +
                 '}';
     }
 }
