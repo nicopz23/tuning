@@ -1,8 +1,8 @@
 package com.ceica.securityspring.service;
 
-import com.ceica.securityspring.model.Authority;
-import com.ceica.securityspring.model.User;
-import com.ceica.securityspring.repository.AuthorityRepository;
+//import com.ceica.securityspring.model.Authority;
+import com.ceica.securityspring.model.Usuarios;
+//import com.ceica.securityspring.repository.AuthorityRepository;
 import com.ceica.securityspring.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -21,44 +21,46 @@ import java.util.List;
 public class UserService implements UserDetailsService {
 
     private UserRepository userRepository;
-    private AuthorityRepository authorityRepository;
+    //private AuthorityRepository authorityRepository;
     private BCryptPasswordEncoder passwordEncoder;
-    @Autowired
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+    /*@Autowired
     public UserService(UserRepository userRepository,AuthorityRepository authorityRepository) {
         this.userRepository = userRepository;
-        this.authorityRepository=authorityRepository;
+        //his.authorityRepository=authorityRepository;
         passwordEncoder=new BCryptPasswordEncoder();
-    }
+    }*/
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUsername(username);
+        Usuarios user = userRepository.findByUser(username);
         if (user == null) {
             throw new UsernameNotFoundException("Usuario no encontrado con nombre de usuario: " + username);
         }
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
         return new org.springframework.security.core.userdetails.User(
-                user.getUsername(),
+                user.getUser(),
                 user.getPassword(),
-                getAuthorities(null)
+                authorities
         );
     }
 
-    private Collection<? extends GrantedAuthority> getAuthorities(Collection<Authority> authorities) {
+   /* private Collection<? extends GrantedAuthority> getAuthorities(Collection<Authority> authorities) {
         List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         for (Authority authority : authorities) {
             grantedAuthorities.add(new SimpleGrantedAuthority(authority.getAuthority()));
         }
         return grantedAuthorities;
-    }
+    }*/
 
-    public void crearUsuario(User user) {
-
-       User newUser=userRepository.save(user);
-       //Encriptamos password
-        newUser.setPassword(passwordEncoder.encode(user.getPassword()));
-       Authority authority=new Authority();
-       authority.setAuthority("USER");
-       authority.setUser_id(newUser.getId());
-        authorityRepository.save(authority);
+    public void crearUsuario(Usuarios user) {
+        //Encriptamos password
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+       Usuarios newUser=userRepository.save(user);
+        //authorityRepository.save(authority);
     }
 }

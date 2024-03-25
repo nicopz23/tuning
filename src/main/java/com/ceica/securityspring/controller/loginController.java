@@ -1,6 +1,6 @@
 package com.ceica.securityspring.controller;
 
-import com.ceica.securityspring.model.User;
+import com.ceica.securityspring.model.Usuarios;
 import com.ceica.securityspring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,10 +28,10 @@ public class loginController {
     }
 
     @PostMapping("/register")
-    public String postRegister(@ModelAttribute User user) {
+    public String postRegister(@ModelAttribute Usuarios user) {
         //Encriptar contraseña
         user.setPassword(user.getPassword());
-        user.setEnabled(true);
+        //user.setEnabled(true);
         userService.crearUsuario(user);
         System.out.println(user);
         return "register";
