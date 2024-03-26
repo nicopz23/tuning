@@ -11,8 +11,13 @@ header {
 }
 #fondo{
     body {
+
         background-image:"/images/portada.gif"; /* Ruta relativa al archivo GIF */
         background-repeat: no-repeat;
+        background-position: center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: cover; /* Ajusta el tamaño para cubrir el cuerpo */
     }
 }
