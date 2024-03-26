@@ -3,9 +3,12 @@ import com.ceica.securityspring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.annotation.web.configurers.LogoutConfigurer;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.web.SecurityFilterChain;
@@ -39,6 +42,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/","/coches").permitAll()
+                        .requestMatchers("/cochescontroller").permitAll()
                         .requestMatchers("/img/**","/js/**","/css/**").permitAll()
                         .anyRequest().authenticated()
                 )
@@ -47,14 +51,12 @@ public class SecurityConfig {
                         .successHandler(authenticationSuccessHandler)
                         .permitAll()
                 )
-                .logout((logout) -> logout.permitAll());
+                .logout(LogoutConfigurer::permitAll
+                );
+        http
+                .csrf(AbstractHttpConfigurer::disable);
         // Ignorar los archivos estáticos
 
         return http.build();
     }
-
-
-
-
-
 }
