@@ -1,0 +1,80 @@
+/* Estilo para la tarjeta */
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card h2 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para los botones de colores y llantas */
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+/* Estilo específico para los botones de colores */
+#blanco {
+    color: #fff;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+#azul {
+    color: blue;
+    background-color: blue;
+    border-color: blue;
+}
+
+#negro {
+    color: black;
+    background-color: #000;
+    border-color: #000;
+}
+
+#rojo {
+    color: red;
+    background-color: red;
+    border-color: red;
+}
+
+#verde {
+    color: darkolivegreen;
+    background-color: darkolivegreen;
+    border-color: darkolivegreen;
+}
+
+/* Estilo específico para los botones de llantas */
+#basico {
+    color: #333;
+}
+
+#lux {
+    color: darkgoldenrod;
+    background-color: darkgoldenrod;
+    border-color: darkgoldenrod;
+}
