@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LlantasRepository extends JpaRepository<Llantas, Integer> {
-    Llantas findByNombre(String nombre);
+    Llantas findByTipo(String tipo);
 }
 

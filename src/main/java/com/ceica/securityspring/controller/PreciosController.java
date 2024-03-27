@@ -19,16 +19,23 @@ public class PreciosController {
         this.llantasService = llantasService;
     }
 
-    @GetMapping("/getPrecio")
-    public ResponseEntity<String> getPrecio(@RequestParam("nombreColor") String nombreColor, @RequestParam("nombreLlanta") String nombreLlanta) {
+    @GetMapping("/getPrecioColor")
+    public ResponseEntity<String> getPrecioColor(@RequestParam("nombreColor") String nombreColor) {
         String precioColor = coloresService.getColorPrice(nombreColor);
-        String precioLlanta = llantasService.getLlantaPrice(nombreLlanta);
-
-        if (precioColor != null && precioLlanta != null) {
-            return ResponseEntity.ok("Precio del color: " + precioColor + ", Precio de la llanta: " + precioLlanta);
+        if (precioColor != null) {
+            return ResponseEntity.ok(precioColor);
         } else {
-            return ResponseEntity.notFound().build(); // Manejar el caso en que el color o la llanta no existen
+            return ResponseEntity.notFound().build(); // Manejar el caso en que el color no existe
+        }
+    }
+
+    @GetMapping("/getPrecioLlanta")
+    public ResponseEntity<String> getPrecioLlanta(@RequestParam("nombreLlanta") String nombreLlanta) {
+        String precioLlanta = llantasService.getLlantaPrice(nombreLlanta);
+        if (precioLlanta != null) {
+            return ResponseEntity.ok(precioLlanta);
+        } else {
+            return ResponseEntity.notFound().build(); // Manejar el caso en que la llanta no existe
         }
     }
 }
-

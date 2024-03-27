@@ -9,35 +9,35 @@ function changeImage(buttonId) {
 
     switch (buttonId) {
         case 'white':
-            imageUrl = '/img/BaseBox.jpg';
+            imageUrl = '/img/BaseCay.jpg';
             nombreColor = 'Blanco';
             break;
         case 'red':
-            imageUrl = '/img/RojoBox.jpg';
+            imageUrl = '/img/RojoCay.jpg';
             nombreColor = 'Rojo Guardia';
             break;
         case 'green':
-            imageUrl = '/img/VerdeBox.jpg';
+            imageUrl = '/img/VerdeCay.jpg';
             nombreColor = 'Verde Aventurine Metalizado';
             break;
         case 'blue':
-            imageUrl = '/img/AzulBox.jpg';
+            imageUrl = '/img/AzulCay.jpg';
             nombreColor = 'Azul Gentian Metalizado';
             break;
         case 'black':
-            imageUrl = '/img/NegroBox.jpg';
+            imageUrl = '/img/NegroCay.jpg';
             nombreColor = 'Negro Metalizadio';
             break;
         case 'rin-normal':
-            imageUrl = '/img/RinBaseBox.jpg';
+            imageUrl = '/img/RinBaseCay.jpg';
             nombreLlanta = 'Cayman basico';
             break;
         case 'rin-lujo':
-            imageUrl = '/img/RinDeLujoBox.jpg';
+            imageUrl = '/img/RinDeLujoCay.jpg';
             nombreLlanta = '911 Lux';
             break;
         default:
-            imageUrl = '/img/Basebox.jpg'; // Imagen predeterminada
+            imageUrl = '/img/BaseCay.jpg'; // Imagen predeterminada
             break;
     }
 
@@ -91,10 +91,9 @@ function changeImage(buttonId) {
 
     function calcularSumaTotal(precioColor, precioLlanta) {
         // Realizar la suma aritmética
-        var sumaTotal = 77500.00 + precioColor + precioLlanta;
+        var sumaTotal = 75000.00 + precioColor + precioLlanta;
 
         // Mostrar la suma total en el HTML
         document.getElementById('sumaTotal').textContent = `Precio Total = ${sumaTotal}`;
     }
-
 }

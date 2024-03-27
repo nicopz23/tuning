@@ -15,7 +15,7 @@ public class LlantasService {
     }
 
     public String getLlantaPrice(String nombreLlanta) {
-        Llantas llanta = llantasRepository.findByNombre(nombreLlanta);
+        Llantas llanta = llantasRepository.findByTipo(nombreLlanta);
         if (llanta != null) {
             return llanta.getPrecio();
         } else {

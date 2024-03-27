@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Colores {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer idcolores;
     private String nombre;
     private String precio;
 
@@ -15,11 +15,11 @@ public class Colores {
     }
 
     public Integer getId() {
-        return id;
+        return idcolores;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.idcolores = id;
     }
 
     public String getNombre() {

@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Llantas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer idllantas;
     private String tipo;
     private String precio;
 
@@ -15,11 +15,11 @@ public class Llantas {
     }
 
     public Integer getId() {
-        return id;
+        return idllantas;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.idllantas = id;
     }
 
     public String getTipo() {
