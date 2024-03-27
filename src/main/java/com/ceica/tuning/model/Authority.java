@@ -1,4 +1,4 @@
-package com.ceica.tuning.model;
+/*package com.ceica.securityspring.model;
 
 import jakarta.persistence.*;
 
@@ -38,4 +38,4 @@ public class Authority {
     public void setUser_id(Integer user_id) {
         this.user_id = user_id;
     }
-}
+}*/

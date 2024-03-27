@@ -30,7 +30,7 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
         if(authentication.getAuthorities().toString().contains("admin")){
             response.sendRedirect(request.getContextPath()+"/admin");
         }else{
-            response.sendRedirect(request.getContextPath()+"/user");
+            response.sendRedirect(request.getContextPath()+"/coches");
         }
     }
 }
