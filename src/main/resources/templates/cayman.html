@@ -10,7 +10,7 @@
 <div class="container" >
     <div class="card" id="box">
 
-        <h2>CAYMAN</h2>
+        <h2 id="modelo">CAYMAN</h2>
         <img id="myImage" th:src="@{/img/BaseCay.jpg}" alt="Boxster" class="image">
     </div>
     <div class="card" id="col">
@@ -33,6 +33,8 @@
     <p id="precioLlanta">Precio Rin = 0.00</p>
     <p id="sumaTotal">Precio Total = 0.00</p>
 </div>
+<div id="informacion"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script th:src="@{/js/infocochescayman.js}"></script>
 </body>
 </html>

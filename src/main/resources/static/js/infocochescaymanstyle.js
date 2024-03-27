@@ -98,3 +98,24 @@ function changeImage(buttonId) {
     }
 
 }
+$(document).ready(function() {
+    // Hacer la solicitud AJAX al controlador para obtener la información adicional
+    $.ajax({
+        url: '/informacionAdicional', // La ruta del controlador
+        method: 'GET',
+        data: { modelo: 'Cayman Style' }, // El modelo deseado
+        success: function(data) {
+            // Manipular los datos devueltos y mostrarlos en la página
+            $('#informacion').html(`
+                        <p>Pwmotor: ${data.pwmotor}</p>
+                        <p>Velocidad Máxima: ${data.velocidadMax}</p>
+                        <p>Cilindrada: ${data.cilindrara}</p>
+                    `);
+        },
+        error: function(xhr, status, error) {
+            // Manejar errores de la solicitud AJAX
+            console.error('Error en la solicitud AJAX:', error);
+        }
+    });
+});
+

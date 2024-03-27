@@ -9,8 +9,7 @@
 <body>
 <div class="container" >
     <div class="card" id="box">
-
-        <h2>BOXSTER STYLE</h2>
+        <h2 id="modelo">BOXSTER STYLE</h2>
         <img id="myImage" th:src="@{/img/BaseboxStyle.jpg}" alt="Boxster" class="image">
     </div>
     <div class="card" id="col">
@@ -33,6 +32,8 @@
     <p id="precioLlanta">Precio Rin = 0.00</p>
     <p id="sumaTotal">Precio Total = 0.00</p>
 </div>
+<div id="informacion"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script th:src="@{/js/infocochesstyle.js}"></script>
 </body>
 </html>

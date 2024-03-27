@@ -8,23 +8,23 @@ public class Coches {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer idcoches;
     private String modelo;
     private String marca;
-    private String precioBasico;
+    private String precio;
     private String pwmotor;
-    private String cilindrara;
-    private String velocidadMax;
+    private Integer cilindrada;
+    private String velocidadmax;
 
     public Coches() {
     }
 
     public Integer getIdcoches() {
-        return id;
+        return idcoches;
     }
 
     public void setIdcoches(Integer idcoches) {
-        this.id = idcoches;
+        this.idcoches = idcoches;
     }
 
     public String getModelo() {
@@ -44,11 +44,11 @@ public class Coches {
     }
 
     public String getPrecioBasico() {
-        return precioBasico;
+        return precio;
     }
 
     public void setPrecioBasico(String precioBasico) {
-        this.precioBasico = precioBasico;
+        this.precio = precioBasico;
     }
 
     public String getPwmotor() {
@@ -59,19 +59,19 @@ public class Coches {
         this.pwmotor = pwmotor;
     }
 
-    public String getCilindrara() {
-        return cilindrara;
+    public Integer getCilindrara() {
+        return cilindrada;
     }
 
-    public void setCilindrara(String cilindrara) {
-        this.cilindrara = cilindrara;
+    public void setCilindrara(Integer cilindrara) {
+        this.cilindrada = cilindrara;
     }
 
     public String getVelocidadMax() {
-        return velocidadMax;
+        return velocidadmax;
     }
 
     public void setVelocidadMax(String velocidadMax) {
-        this.velocidadMax = velocidadMax;
+        this.velocidadmax = velocidadMax;
     }
 }

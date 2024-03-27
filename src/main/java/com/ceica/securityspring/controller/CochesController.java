@@ -1,13 +1,32 @@
 package com.ceica.securityspring.controller;
 
+import com.ceica.securityspring.model.Coches;
+import com.ceica.securityspring.service.CochesService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 public class CochesController {
+    private final CochesService cochesService;
+
+    @Autowired
+    public CochesController(CochesService cochesService) {
+        this.cochesService = cochesService;
+    }
+    @GetMapping("/informacionAdicional")
+    @ResponseBody
+    public Map<String, String> obtenerInformacionAdicional(@RequestParam("modelo") String modelo) {
+        Map<String, String> infoAdicional = new HashMap<>();
+        infoAdicional.put("pwmotor", cochesService.getPwmotor(modelo));
+        infoAdicional.put("velocidadMax", cochesService.getVelocidadMax(modelo));
+        infoAdicional.put("cilindrara", String.valueOf(cochesService.getCilindrara(modelo)));
+        return infoAdicional;
+    }
     @GetMapping("/coches")
     public String user() {
         return "coches";
