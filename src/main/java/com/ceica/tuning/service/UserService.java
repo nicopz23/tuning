@@ -23,11 +23,12 @@ public class UserService implements UserDetailsService {
     private UserRepository userRepository;
     private AuthorityRepository authorityRepository;
     private BCryptPasswordEncoder passwordEncoder;
+
     @Autowired
-    public UserService(UserRepository userRepository,AuthorityRepository authorityRepository) {
+    public UserService(UserRepository userRepository, AuthorityRepository authorityRepository) {
         this.userRepository = userRepository;
-        this.authorityRepository=authorityRepository;
-        passwordEncoder=new BCryptPasswordEncoder();
+        this.authorityRepository = authorityRepository;
+        passwordEncoder = new BCryptPasswordEncoder();
     }
 
     @Override
@@ -53,12 +54,12 @@ public class UserService implements UserDetailsService {
 
     public void crearUsuario(User user) {
 
-       User newUser=userRepository.save(user);
-       //Encriptamos password
+        User newUser = userRepository.save(user);
+        //Encriptamos password
         newUser.setPassword(passwordEncoder.encode(user.getPassword()));
-       Authority authority=new Authority();
-       authority.setAuthority("USER");
-       authority.setUser_id(newUser.getId());
+        Authority authority = new Authority();
+        authority.setAuthority("USER");
+        authority.setUser_id(newUser.getId());
         authorityRepository.save(authority);
     }
 }

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle, darkslateblue,yellowgreen);
+    background: radial-gradient(circle, darkslateblue,deepskyblue);
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,8 +10,8 @@ body {
 }
 
 .login-container {
-
-    background-color: darkorange;
+    color: white;
+    background-color: darkblue;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

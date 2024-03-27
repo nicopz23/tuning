@@ -1,17 +1,20 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px;
 }
 
 .card {
-    width: 400px;
+    width: 45%; /* Ajusta el tamaño de la tarjeta según tu preferencia */
+    max-width: 400px; /* Establece un ancho máximo para la tarjeta */
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
     margin: 10px;
     text-align: center;
+    background-color: white; /* Agrega un fondo blanco para que las tarjetas se destaquen */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agrega sombra para resaltar las tarjetas */
 }
 
 .card img {
@@ -28,6 +31,12 @@
     font-weight: bolder;
     font-style: oblique;
 }
-body{
+
+body {
     background-color: dimgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura del cuerpo para centrar el contenido */
+    margin: 0; /* Elimina el margen predeterminado */
 }

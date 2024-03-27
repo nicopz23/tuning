@@ -1,45 +1,65 @@
+body {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+    height: 100vh; /* Establece la altura al 100% de la ventana gráfica */
+    background-image: url('/images/portada.gif'); /* Ruta relativa al archivo GIF */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño para cubrir el cuerpo */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
 /* Estilos para el encabezado */
 header {
-    background-color: #333; /* Color de fondo oscuro */
-    color: white; /* Color de texto blanco */
-    padding: 10px; /* Espacio interior de 10px */
-    display: flex; /* Utiliza el modelo de caja flexible */
-    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
-    align-items: center; /* Centra verticalmente los elementos */
-    margin-right: 20px;
-
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000, 0 0 30px #ff0000, 0 0 35px #ff0000; /* Añade sombras rojas para simular llamas */
+    animation: flicker 1s infinite alternate; /* Aplica una animación de parpadeo */
 }
-#fondo{
-    body {
 
-        background-image:"/images/portada.gif"; /* Ruta relativa al archivo GIF */
-        background-repeat: no-repeat;
-        background-position: center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover; /* Ajusta el tamaño para cubrir el cuerpo */
+@keyframes flicker {
+    0% {
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000, 0 0 30px #ff0000, 0 0 35px #ff0000; /* Empieza con las sombras */
+    }
+    100% {
+        text-shadow: 0 0 5px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000, 0 0 30px #ff0000, 0 0 35px #ff0000, 0 0 40px #ff0000; /* Aumenta ligeramente la intensidad de las sombras */
     }
 }
 
 
 /* Estilos para el botón */
 button {
-    background-color: black; /* Color de fondo verde */
+    background-color: black; /* Color de fondo negro */
     border: none; /* Sin borde */
-    color: deepskyblue; /* Color de texto blanco */
+    color: deepskyblue; /* Color de texto azul */
     padding: 10px 20px; /* Espacio interior de 10px arriba/abajo y 20px izquierda/derecha */
     text-align: center; /* Alineación del texto centrada */
     text-decoration: none; /* Sin decoración de texto */
     display: inline-block; /* Hace que el botón se comporte como un bloque */
-    font-size:38px; /* Tamaño de fuente */
+    font-size: 38px; /* Tamaño de fuente */
     cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
     border-radius: 5px; /* Bordes redondeados */
-    margin-left: 47%;
+    position: fixed; /* Posicionamiento fijo para mantener el botón en la parte inferior */
+    bottom: 20px; /* Espacio desde el borde inferior */
+    left: 50%; /* Alinea el botón en el centro horizontalmente */
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    z-index: 999; /* Asegura que el botón esté por encima de otros elementos */
 }
 
 /* Estilos para el botón cuando el cursor está sobre él */
 button:hover {
-    background-color: papayawhip; /* Cambia el color de fondo a un tono más oscuro de verde */
-    color: black;
+    background-color: papayawhip; /* Cambia el color de fondo a un tono más claro */
+    color: black; /* Cambia el color del texto a negro */
 }
+
