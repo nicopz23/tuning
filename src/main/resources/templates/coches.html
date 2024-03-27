@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  th:href="@{/css/coches.css}">
     <title>Coches Porsche</title>
 </head>
 <body>
 <div class="container">
     <div class="card" id="basebox">
         <h2>Boxster</h2>
-        <img src="/static/img/Basebox.jpg" alt="Foto 1">
+        <img th:src="@{/img/Basebox.jpg}" alt="Foto 1">
     </div>
     <div class="card" id="basecay">
         <h2>Cayman</h2>
-        <img src="/static/img/BaseCay.jpg" alt="Foto 2">
+        <img th:src="@{/img/BaseCay.jpg}" alt="Foto 2">
     </div>
     <div class="card" id="basecaystyle">
         <h2>Cayman Style</h2>
-        <img src="/static/img/BaseCayStyle.jpg" alt="Foto 3">
+        <img th:src="@{/img/BaseCayStyle.jpg}" alt="Foto 3">
     </div>
     <div class="card" id="baseboxstyle">
         <h2>Boxster Style</h2>
-        <img src="/static/img/BaseBoxStyle.jpg" alt="Foto 4">
+        <img th:src="@{/img/BaseBoxStyle.jpg}" alt="Foto 4">
     </div>
     </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../static/js/coches.js"></script>
+<script th:src="@{/js/coches.js}"></script>
 </body>
 </html>

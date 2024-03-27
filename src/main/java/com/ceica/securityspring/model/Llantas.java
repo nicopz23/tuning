@@ -11,6 +11,9 @@ public class Llantas {
     private String tipo;
     private String precio;
 
+    public Llantas() {
+    }
+
     public Integer getId() {
         return id;
     }

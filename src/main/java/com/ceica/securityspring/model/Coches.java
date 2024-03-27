@@ -16,6 +16,8 @@ public class Coches {
     private String cilindrara;
     private String velocidadMax;
 
+    public Coches() {
+    }
 
     public Integer getIdcoches() {
         return id;

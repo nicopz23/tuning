@@ -1,51 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido</title>
-    <style> body {
-        font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
-        margin: 0;
-        padding: 0;
-    }
-
-    .container {
-        text-align: center;
-        margin-top: 100px;
-    }
-
-    h1 {
-        font-size: 36px;
-    }
-
-    p {
-        font-size: 18px;
-        color: #555;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 20px;
-        transition: background-color 0.3s ease;
-    }
-
-    .btn:hover {
-        background-color: #0056b3;
-    }
-    </style>
+    <title>Portada</title>
+    <link rel="stylesheet"  th:href="@{/css/index.css}">
 </head>
 <body>
-<div class="container">
-    <h1>Bienvenido</h1>
-    <p>¡Gracias por visitarnos!</p>
-    <a href="/login" class="btn">Iniciar sesión</a>
-</div>
+<img th:src="@{/img/portada.gif}" alt="gif portada" />
+<header>
+    <img id="titulo" th:src="@{/img/logo2.jfif}" alt="">
+    <div>
+        <h1>TUNING TOTAL</h1>
+    </div>
+</header>
+<img id="fondo" th:src="@{/img/portada.gif}" alt="">
+<a href="/login"><button id="go" type="submit">GO</button></a>
 </body>
 </html>
+

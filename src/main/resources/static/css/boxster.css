@@ -1,0 +1,122 @@
+/* Estilo para la tarjeta */
+.container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.image {
+    width: 100%; /* Ancho de la imagen grande */
+    max-width: 600px; /* Ancho máximo */
+    margin: 20px auto; /* Margen superior e inferior automático */
+}
+
+#box{
+    width: 100%; /* Ancho de la imagen grande */
+    max-width: 600px; /* Ancho máximo */
+    margin: 20px auto; /* Margen superior e inferior automático */
+    display: block;
+
+}
+#col{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+#rin{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card h2 {
+    margin-right: 15px;
+    font-size: 32px;
+    font-weight: bolder;
+    color: darkblue;
+    font-family: "Bookman Old Style";
+    font-style: oblique;
+}
+
+/* Estilo para los botones de colores y llantas */
+.button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ddd;
+}
+
+/* Estilo específico para los nombres encima de los botones */
+.button-label {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px; /* Ajusta según sea necesario */
+    display: block;
+    text-align: center;
+}
+
+/* Estilo específico para los botones de colores */
+#blanco {
+    color: #fff;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+#azul {
+    color: blue;
+    background-color: blue;
+    border-color: blue;
+}
+
+#negro {
+    color: black;
+    background-color: #000;
+    border-color: #000;
+}
+
+#rojo {
+    color: red;
+    background-color: red;
+    border-color: red;
+}
+
+#verde {
+    color: darkolivegreen;
+    background-color: darkolivegreen;
+    border-color: darkolivegreen;
+}
+
+/* Estilo específico para los botones de llantas */
+.small-image {
+    margin-top: 10px; /* Ajusta según sea necesario */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    display: block;
+}
+
+.small-image:hover {
+    background-color: #ddd;
+}
