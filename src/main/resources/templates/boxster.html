@@ -7,23 +7,27 @@
     <link rel="stylesheet" th:href="@{css/boxster.css}">
 </head>
 <body>
-<div class="container" >
+<div class="container">
     <div class="card" id="box">
         <h2 id="modelo">BOXSTER</h2>
         <img id="myImage" th:src="@{/img/Basebox.jpg}" alt="Boxster" class="image">
     </div>
-    <div class="card" id="col">
-        <h2>COLORES</h2>
-        <button id="blanco" class="button white" onclick="changeImage('white')">White</button>
-        <button id="rojo" class="button red" onclick="changeImage('red')">Rojo</button>
-        <button id="verde" class="button green" onclick="changeImage('green')">Verde</button>
-        <button id="azul" class="button blue" onclick="changeImage('blue')">Azul</button>
-        <button id="negro" class="button black" onclick="changeImage('black')">Negro</button>
-    </div>
-    <div class="card" id="rin">
-        <h2>LLANTAS</h2>
-        <div id="rin-normal" class="small-image" onclick="changeImage('rin-normal')">Rin Basico</div>
-        <div id="rin-lujo" class="small-image" onclick="changeImage('rin-lujo')">Rin de Lux</div>
+    <div class="configuracion">
+
+
+        <div class="card" id="col">
+            <h2>COLORES</h2>
+            <button id="blanco" class="button white" onclick="changeImage('white')">White</button>
+            <button id="rojo" class="button red" onclick="changeImage('red')">Rojo</button>
+            <button id="verde" class="button green" onclick="changeImage('green')">Verde</button>
+            <button id="azul" class="button blue" onclick="changeImage('blue')">Azul</button>
+            <button id="negro" class="button black" onclick="changeImage('black')">Negro</button>
+        </div>
+        <div class="card" id="rin">
+            <h2>LLANTAS</h2>
+            <div id="rin-normal" class="small-image" onclick="changeImage('rin-normal')">Rin Basico</div>
+            <div id="rin-lujo" class="small-image" onclick="changeImage('rin-lujo')">Rin de Lux</div>
+        </div>
     </div>
 </div>
 <div>

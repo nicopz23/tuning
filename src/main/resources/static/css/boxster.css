@@ -1,10 +1,9 @@
 /* Estilo para la tarjeta */
 .container {
-    text-align: center;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
 }
 
 .image {
@@ -24,12 +23,14 @@
     margin-top: 10px;
     display: flex;
     justify-content: center;
+    margin-right: 30px;
 
 }
 #rin{
     margin-top: 10px;
     display: flex;
     justify-content: center;
+    margin-left: 30px;
 
 }
 
@@ -52,7 +53,7 @@
 .button {
     margin: 5px;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 2px;
     border: 2px solid #ccc;
     border-radius: 25px;
     background-color: #f0f0f0;
@@ -74,30 +75,40 @@
 
 /* Estilo específico para los botones de colores */
 #blanco {
+    margin-top: 35px;
+    height: 7px;
     color: #fff;
     background-color: #fff;
     border-color: #ccc;
 }
 
 #azul {
+    margin-top: 35px;
+    height: 7px;
     color: blue;
     background-color: blue;
     border-color: blue;
 }
 
 #negro {
+    margin-top: 35px;
+    height: 7px;
     color: black;
     background-color: #000;
     border-color: #000;
 }
 
 #rojo {
+    margin-top: 35px;
+    height: 7px;
     color: red;
     background-color: red;
     border-color: red;
 }
 
 #verde {
+    margin-top: 35px;
+    height: 7px;
     color: darkolivegreen;
     background-color: darkolivegreen;
     border-color: darkolivegreen;
@@ -112,6 +123,7 @@
     background-color: #f0f0f0;
     cursor: pointer;
     text-align: center;
+    text-position: center;
     font-size: 18px;
     color: black;
     display: block;
@@ -119,4 +131,8 @@
 
 .small-image:hover {
     background-color: #ddd;
+}
+.configuracion{
+    display: flex;
+    justify-content: space-between;
 }
