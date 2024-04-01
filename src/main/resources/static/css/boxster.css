@@ -1,4 +1,7 @@
 /* Estilo para la tarjeta */
+body{
+    background-color: dimgrey;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -44,7 +47,7 @@
     margin-right: 15px;
     font-size: 32px;
     font-weight: bolder;
-    color: darkblue;
+    color: royalblue;
     font-family: "Bookman Old Style";
     font-style: oblique;
 }
